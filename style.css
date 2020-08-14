@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.editor {
+    background-color: #2F9C95;
+    width: 100%;
+    color: #E5F9E0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tools__color {
+    background-color: purple;
+    color: purple;
+}
+
+.tools__clear {
+    background-color: #40C9A2;
+    border:solid 1px #A3F7B5;
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 502px;
+    height: 502px;
+    border: solid 1px #664147;
+}
+
+.canvas__pixel {
+    border: solid 1px #664147;
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+}
