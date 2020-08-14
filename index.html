@@ -11,27 +11,38 @@
 <body>
     <div class="editor">
         <div class="tools">
-            <select class="tools__color" name="color">
-                <option value="black">Black</option>
-                <option value="gray">Gray</option>
-                <option value="silver">Silver</option>
-                <option value="white">White</option>
-                <option value="fuchsia">Fuchsia</option>
-                <option value="purple" selected>Purple</option>
-                <option value="red">Red</option>
-                <option value="maroon">Maroon</option>
-                <option value="yellow">Yellow</option>
-                <option value="olive">Olive</option>
-                <option value="lime">Lime</option>
-                <option value="green">Green</option>
-                <option value="aqua">Aqua</option>
-                <option value="teal">Teal</option>
-                <option value="blue">Blue</option>
-                <option value="navy">Navy</option>
-            </select>
-            <input type="checkbox" class="tools__eraser" name="eraser" title="Eraser" id="eraser">
-            <label for="eraser">Eraser</label>
-            <input type="button" class="tools__clear" value="Clear">        
+            <div class="tools-container">
+                <input type="number" min="1" max="10" value="10" name="columns" class="tools__columns" id="canvas__columns">
+                <input type="number" min="1" max="10" value="10" name="rows" class="tools__rows" id="canvas__rows">
+                <input type="button" class="tools__create" value="Create">
+            </div>
+            <div class="tools-container">
+                <select class="tools__color" name="color">
+                    <option value="black">Black</option>
+                    <option value="gray">Gray</option>
+                    <option value="silver">Silver</option>
+                    <option value="white">White</option>
+                    <option value="fuchsia">Fuchsia</option>
+                    <option value="purple" selected>Purple</option>
+                    <option value="red">Red</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="olive">Olive</option>
+                    <option value="lime">Lime</option>
+                    <option value="green">Green</option>
+                    <option value="aqua">Aqua</option>
+                    <option value="teal">Teal</option>
+                    <option value="blue">Blue</option>
+                    <option value="navy">Navy</option>
+                </select>
+                <div class="checkbox">
+                    <input type="checkbox" class="checkbox__input tools__eraser" name="eraser" title="Eraser"
+                        id="eraser">
+                    <label class="checkbox__label" for="eraser">Eraser</label>
+                </div>
+                <input type="button" class="tools__clear" value="Clear">
+            </div>
+
         </div>
 
         <div class="canvas">
