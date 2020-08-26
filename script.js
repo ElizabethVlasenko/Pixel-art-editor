@@ -1,8 +1,27 @@
 let optionColor = document.querySelectorAll(".tools__color option");
 let selectedColor = document.querySelector(".tools__color");
-let pixel = document.querySelectorAll(".canvas__pixel");
+let canvas = document.querySelector(".canvas");
 let eraser = document.querySelector(".tools__eraser");
 let clearButton = document.querySelector(".tools__clear");
+let canvasWidth = document.querySelector(".tools__columns");
+let canvasHeight = document.querySelector(".tools__rows");
+let createCanvasBtn = document.querySelector(".tools__create");
+
+function createCanvas(){
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.firstChild);
+    }
+
+    for(i =0; i<canvasWidth.value*canvasHeight.value; i++) {
+        let div = document.createElement('div');
+        div.classList.add("canvas__pixel");
+        div.style.width = (500 / canvasWidth.value) + "px";
+        div.style.height = (500 / canvasHeight.value) + "px";
+        div.addEventListener("click", paint);
+        canvas.append(div);
+    } 
+}
+
 
 for(i =0; i<optionColor.length; i++) {
     optionColor[i].style.backgroundColor = optionColor[i].value;
@@ -30,8 +49,6 @@ function clear() {
       });
 }
 
-pixel.forEach(function(item, index, array) {
-    item.addEventListener("click", paint);
-  });
-  clearButton.addEventListener("click", clear);
+clearButton.addEventListener("click", clear);
 selectedColor.addEventListener("change", changeOption);
+createCanvasBtn.addEventListener("click", createCanvas);

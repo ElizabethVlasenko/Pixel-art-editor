@@ -139,6 +139,7 @@ body {
     height: 502px;
     margin-bottom: 30px;
     border: solid 1px #664147;
+    background-color: #FFF;
 }
 
 .canvas__pixel {
